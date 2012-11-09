@@ -11,7 +11,7 @@
 if( mw.util.getParamValue('diff') !== null ){
 	$(function(){
 		$('.diffchange-inline').filter(function(){
-			return $( this ).text().length < 4;
+			return $( this ).text().length < 2;
 		}).css( {
 			background: '#FF7B7B',
 			padding: '0 0.2em'
