@@ -8,15 +8,15 @@
 ( function ( mw, $ ) {
 'use strict';
 
-if( mw.util.getParamValue('diff') !== null ){
-	$(function(){
-		$('.diffchange-inline').filter(function(){
-			return $( this ).text().length === 0;
-		}).css( {
+if( mw.util.getParamValue( 'diff' ) !== null ){
+	$( function(){
+		$( '.diffchange-inline' ).filter( function(){
+			return $.trim( $( this ).text() ).length === 0;
+		} ).css( {
 			background: '#FF7B7B',
 			padding: '0 0.2em'
 		} );
-	});
+	} );
 }
 
 }( mediaWiki, jQuery ) );
