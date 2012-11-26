@@ -10,12 +10,18 @@
 
 if( mw.util.getParamValue( 'diff' ) !== null ){
 	$( function(){
-		$( '.diffchange-inline' ).filter( function(){
+		var whiteSpaceChanges = function(){
 			return $.trim( $( this ).text() ).length === 0;
-		} ).css( {
+		};
+		$( '.diff-deletedline .diffchange-inline' ).filter( whiteSpaceChanges ).css( {
 			background: '#FF7B7B',
 			padding: '0 0.2em'
 		} );
+		$( '.diff-addedline .diffchange-inline' ).filter( whiteSpaceChanges ).css( {
+			background: '#7BFF7B',
+			padding: '0 0.2em'
+		} );
+		
 	} );
 }
 
