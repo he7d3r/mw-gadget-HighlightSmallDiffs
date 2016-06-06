@@ -6,7 +6,7 @@
 ( function ( mw, $ ) {
 	'use strict';
 
-	if ( mw.util.getParamValue( 'diff' ) !== null ) {
+	if ( mw.util.getParamValue( 'diff' ) !== null || mw.util.getParamValue( 'action' ) === 'submit' ) {
 		$( function () {
 			var whiteSpaceChanges = function () {
 				return $.trim( $( this ).text() ).length === 0;
